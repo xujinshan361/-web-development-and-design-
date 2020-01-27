@@ -1,0 +1,150 @@
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>CSS的选择器的学习</title>
+		<!--声明CSS代码域-->
+		<style type="text/css">
+			/*标签选择器*/
+			table{
+				width: 300px;
+				height: 200px;
+				border:solid 1px;
+				background-color: red;
+				color: red;
+			}
+			/*id选择器*/
+			#t1{
+				background-color: blue;
+			}
+			/*类选择器*/
+			.common{
+				color: red;
+			}
+			/*组合选择器*/
+			.common,table{
+				background-color: bisque;
+			}
+			/*子标签选择器*/
+			#u li a{
+				color: black;
+			}
+			#p1 a{
+				color: red;
+			}
+			input[type=text]{
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<h3>CSS的选择器的学习</h3>
+		<hr />
+		<hr />
+		<table id="t1" class="common">
+			<tr>
+				<td>1</td>
+				<td>1</td>
+				<td>1</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>1</td>
+				<td>1</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>1</td>
+				<td>1</td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		<hr />
+		ru
+		<ul id="u">
+			<li><a href="">哈哈</a></li>
+			<li><a href="">呵呵</a></li>
+			<li><a href="">嘿嘿</a></li>
+		</ul>
+		<ul>
+			<li><a href="">哈哈</a></li>
+			<li><a href="">呵呵</a></li>
+			<li><a href="">嘿嘿</a></li>
+		</ul>
+		<p id="p1"> <a href="">xixi</a></p>
+		<p><a href="">xixi</a></p>
+		<a href="">喜喜</a>
+		<b class="common">CSS 学习</b>
+		<hr />
+		<input type="text" name="" id="" value="" /><br />
+		<input type="password" name="" id="" value="" /><br />
+	</body>
+</html>
+<!--
+	CSS的选择器学习：
+		标签选择器:
+			标签名{样式1；样式2；。。。。}
+			作用：会将当前网页内的所有该标签增加相同的属性
+		id选择器：
+			#标签的id属性值{样式1；样式2；。。。。}
+			作用：给某个指定的标签添加指定的样式
+		类选择器：
+			.类选择器名{样式1；样式2；。。。。}
+			作用：给不同的标签添加相同的样式
+		全部选择器：
+			*{样式1；样式2；。。。。}
+			作用：选择所有的HTML标签，并添加相同的样式
+		组合选择器：
+			选择器1，选择器2，。。。{}
+			作用：解决不同选择器之间的重复样式问题
+		子标签选择器：
+			选择器1 子标签选择器 {样式1，样式2，。。。。}
+			作用：
+		属性选择器：
+			标签名[属性名=属性值]{样式1，样式2，。。。。}
+			作用：选择某标签指定某属性值为某个属性值的标签
+	CSS使用过程：
+		1.声明CSS代码域
+		2.使用选择器选择要添加样式的标签
+			根据需求来：
+				使用*选择器来给整个页面添加基础样式
+				使用类选择器给不同的标签添加基础样式
+				使用标签选择器给某类标签添加样式
+				使用ID 属性选择器 style属性声明方式给某个标签添加个性化属性
+		3.书写样式单
+			边框设置
+				border:solid 1px;
+			字体设置
+				font-size:10px;设置字体大小
+				font-family:"黑体"; 设置字体格式
+				font-weight: bold;设置字体加粗
+			字体颜色设置
+				color:颜色;
+			背景颜色设置
+				background-color:颜色;
+			背景图片设置
+				background-img:RUL(图像路径)
+				background-repeate：no-repeate; 设置图片不重复
+				background-size:cover;设置图片平铺整个页面
+			高和宽设置
+			浮动设置
+				float:left|right;
+			行高设置
+				line-height:10;行间距
+-->
+	

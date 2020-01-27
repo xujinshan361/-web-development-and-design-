@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<title>盒子模型简单的布局</title>
+		<meta charset="UTF-8"/>
+		<style type="text/css">
+		/*设置div的基础样式*/
+			div{
+				width: 300px;
+				height: 300px;
+			}
+		/*设置header和footer的样式*/
+			#header,#footer{
+				width: 650px;
+				margin: auto;
+				margin-top: 20px;
+			}
+		/*设置子div的样式*/
+			#div01{
+				border: solid 1px orange;
+				float: left;
+				margin-right: 20px;
+			}
+			#div02{
+				border: solid 1px blueviolet;
+				float: left;
+			}
+			#div03{
+				border: solid 1px #4791FF;
+				float: left;
+				margin-right: 20px;
+			}
+			#div04{
+				border: solid 1px coral;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="header">
+				<div id="div01">
+					我是div01
+				</div>
+				<div id="div02">
+					我是div02
+				</div>
+		</div>
+		
+		<div id="footer">
+			<div id="div03">
+				我是div03
+			</div>
+			<div id="div04">
+				我是div04
+			</div>
+		</div>
+		
+	</body>
+</html>
