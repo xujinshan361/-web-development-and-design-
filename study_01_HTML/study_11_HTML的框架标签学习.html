@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>框架标签学习：</title>
+		<meta charset="UTF-8"/>
+	</head>
+	<!--
+		注意:
+			第一步一定要删除body标签
+		框架标签学习:
+			frameset
+				rows:按照行进行切分页面
+				cols:按照列进行切分页面
+				子标签:
+					frame:进行切分区域的占位,一个frame可以单独加载网页资源.
+						src:资源路径(本地或者网络)
+						name:区域名,结合超链接使用
+	-->
+	<frameset rows="10%,*,10%">
+		<frame src="frameset/top.html" />
+		<frameset cols="10%,*">
+			<frame src="frameset/left.html" />
+			<frame src="frameset/right.html" name="_right"/>
+		</frameset>
+		<frame src="frameset/bottom.html" />
+	</frameset>
+</html>

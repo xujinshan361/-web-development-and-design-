@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>内嵌标签学习</title>
+		<meta charset="UTF-8"/>
+	</head>
+	<body>
+		<h3>内嵌标签学习</h3>
+		<hr />
+		<!--
+			内嵌标签:
+				iframe
+					src:要显示的网页资源路径
+						可以是本地(相对路径)也可以是网络资源(URL)
+						注意:
+							默认当前页面打开及加载src指向的资源
+					width:设置显示区域的宽度
+					height:设置显示区域的高度
+					name:设置内嵌区域的名字,结合超链接标签的target属性使用.
+			作用:
+				在当前网页中加载其他网页的资源,达到不同网页资源之间不相互干扰,并能在同一个页面中展现给用户的目的.
+		-->
+		<a href="http://www.baidu.com" target="_if">百度一下</a>
+		<a href="http://www.so.com" target="_tt">360搜索</a><br />
+		<iframe src="" width="48%" height="400px" name="_if"></iframe>
+		<iframe src="" width="48%" height="400px" name="_tt"></iframe>
+	</body>
+</html>

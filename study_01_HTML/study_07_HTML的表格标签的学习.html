@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>表格标签学习</title>
+	</head>
+	<body>
+		<h3>表格标签的学习</h3>
+		<hr />
+		<h3>表格标签的常用属性设置及学习</h3>
+		<table border="1px" cellpadding="0px" cellspacing="0px">
+			<tr height="50px">
+				<th width="100px">科目</th>
+				<th width="100px">分数</th>
+				<th width="100px">级别</th>
+				<th width="150px">说明</th>
+			</tr>
+			<tr height="50px">
+				<td>java</td>
+				<td>100</td>
+				<td>8</td>
+				<td>面向对象的语言</td>
+			</tr>
+			<tr height="50px">
+				<td>C语言</td>
+				<td>100</td>
+				<td>7</td>
+				<td>面向过程的语言</td>
+			</tr>
+		</table>
+		<hr />
+		<h3>单元格的合并学习</h3>
+		<table border="1px" cellpadding="0px" cellspacing="0px">
+			<tr height="35px">
+				<td width="100px"></td>
+				<td width="100px"></td>
+				<td width="100px"></td>
+				<td width="200px" colspan="2" rowspan="2"></td>
+			</tr>
+			<tr height="35px">
+				<td colspan="2"></td><!--列合并-->
+				<td></td>
+				
+			</tr>
+			<tr height="35px">
+				<td></td>
+				<td></td>
+				<td rowspan="2"></td><!--行合并-->
+				<td ></td>
+				<td></td>
+			</tr>
+			<tr height="35px">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</body>
+</html>
+<!--
+	表格标签的学习：
+		table:声明一个表格
+			tr:声明一行,设置行高，以及该行所有单元格的高度
+				th:声明一个单元格，表头格，默认加黑居中显示
+				td：声明一个单元格，默认居左显示原始数据，
+			注意：
+				行高：改行所有单元格的宽度
+				单元格的宽度即列宽
+		属性：
+			border:给表格加边框
+			width:设置表格的宽度
+			height:设置表格的高度
+			cellpadding:设置内容居边框的距离
+			cellspacing:设置边框的大小
+			
+		特点：
+			默认根据数据的多少进行单元格的大小显示
+	单元格的合并：
+		第一步：
+			首先确保表格是一个规整的表格
+		第二步：
+			根据要合并的单元格，找到其所在的源码的位置
+		第三步：
+			行合并：在要合并的单元格中的第一个单元格上使用属性rowspan =“要合并的单元格数”，并删除其他要合并的单元格完成合并
+			列合并：在要合并的单元格中的任意一个单元格上使用属性colspan=“要合并的单元格数”并删除要合并的其他单元格
+-->
