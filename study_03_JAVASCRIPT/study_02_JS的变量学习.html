@@ -1,0 +1,86 @@
+<html>
+	<head>
+		<title>js的变量学习</title>
+		<meta charset="UTF-8"/>
+		<!--
+			js的变量声明学习：
+				1、js中的所有变量声明只有var关键字。
+					 var a=123;
+					 var A=1234;
+					 var a1=3.1415926;
+					 var a2="js";
+					 var a3='k';
+					 var a4=true;
+					 var a5=new Date();
+					 alert(a);
+				  注意：
+				  	a、js的变量名是严格区分大小的。
+				  	b、js中的字符串可以使用双引号也可以使用单引号。
+				  	c、js中的代码可以不使用分号，但是为了提升代码的阅读性，建议使用分号
+					d、js中可以声明同名变量，不会报错，后面的会将前面的声明覆盖。(重要)					
+			 			var a=123;
+			 			var a="js学习";
+			 			alert(a);
+					e、声明不赋值，默认是undefined
+					
+				2、js中的数据类型
+					数据类型判断关键字：typeof
+					数据类型：
+						number:数字类型
+							var b=456;
+							var b1=1.23;
+							alert(typeof b1);
+						string：字符串类型 ，注意:在js中字符串可以使用单引号或者双引号
+							var b="今天天气真好，适合学习";
+							var b1='l';
+							alert(typeof b1);
+						boolean:
+							var b=true;
+							var b1=false;
+							alert(typeof b1);
+						object：
+							var b=new Date();
+							alert(typeof b);
+						null:
+							空对象赋值，主要是和undefined进行区分。
+						Undefined:undefined
+							var c;
+							alert(typeof c);
+							变量声明不赋值的情况下，默认值是undefined。
+					注意：
+						var d;
+						alert(d);
+						alert(typeof c);
+						在js代码中尽可能的给声明的变量赋初始值;
+					
+		-->
+		<!--声明js代码域-->
+		<script type="text/javascript">
+			/*js的变量学习*/
+			 /*var a=123;
+			 var A=1234;
+			 var a1=3.1415926;
+			 var a2="js";
+			 var a3='k';
+			 var a4=true;
+			 var a5=new Date();
+			 var a="js学习";
+			 alert(a);*/
+			/*js中的数据类型*/
+			var d;
+			alert(d);
+			alert(typeof c);
+		</script>
+	</head>
+	<body>
+		<h3>js的变量学习</h3>
+	</body>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,77 @@
+<html>
+	<head>
+		<title>js的常用对象和方法</title>
+		<meta charset="UTF-8"/>
+		<!--
+			常用的对象和方法：
+				1、String
+				2、Date
+				3、Math
+				4、Global
+		-->
+		<!--声明js代码域-->
+		<script type="text/javascript">
+			//1、String对象学习
+				var str=new String("abcdefg");//声明String对象存储字符串
+				var  str2="MNP";//简写形式
+				//alert(str);
+				//字符串大小写的转换
+					//alert(str.toUpperCase());//将字符串转换为大写
+					//alert(str2.toLowerCase());//将字符串转换为小写
+				//字符串的切割
+//					var s="哈哈,嘿嘿,呵呵";
+//					var s1=s.split(",");//按照指定的字符切割字符串，返回数组。
+//					alert(s1.length);
+				//字符串的截取
+//					var s="abcdef";
+//					alert(s.substr(1,3));//从指定的开始位置截取指定长度的子字符串
+//					alert(s.substring(1,3));//从指定的开始位置和指定的结束位置截取子字符串，含头不含尾。
+				//查找子字符串第一次出现的角标
+//					var s="abcdefg";
+//					alert(s.indexOf("dd"));//返回指定子字符串第一次出现的角标，没有则返回-1;
+			//2、Date对象
+				//1、创建Date对象
+					var d=new Date();
+					//alert(d);
+				//获取当前年份
+//					alert(d.getYear());//返回的是1900年开始距今的年分数
+//					alert(d.getFullYear());//返回的是当前的年份
+//					alert(d.getMonth()+1);//返回的当前月份的角标值，需要+1
+//					alert(d.getDate());//返回的是当前的日期数
+//					alert(d.getDay());//返回的是当前的星期数，但是周天会返回值为0;
+//					alert(d.getHours());//返回当前时间的小时数
+//					alert(d.getMinutes());//返回当前时间的分钟数
+//					alert(d.getSeconds());//返回当前时间的秒数
+					
+					//alert(d.getHours()+":"+d.getMinutes()+":"+d.getSeconds());
+			//3、Math对象学习
+				//1、Math在使用的时候不能new，使用Math.方法名调用即可。
+					//创建随机数字
+//						alert("Math.random():"+Math.random());//返回0-1之间的随机数字，含0不含1。
+//						alert(1000+Math.random()*9000);
+					//向下取整
+//						alert(Math.floor(1000+Math.random()*9000));
+					//向上取整
+//						alert(Math.ceil("12.34"));
+					//四舍五入
+//						alert(Math.round(12.12));
+//						alert(Math.round(12.65));
+					//数值比较:求取最小值，求取最大值
+//						alert(Math.min(12,13,5,78));//获取最小值
+//						alert(Math.max(12,3,4,56));//获取最大值
+			//4、Global对象学习
+					//1、该对象从不直接使用并且不能new，也是就直接写方法名调用即可。
+						//使用eval将字符串转换为可执行的js代码
+							var str="var a=123";
+							eval(str);
+							alert(a);
+						//使用isNaN判断是否值NaN
+							alert(isNaN("123"));
+						//获取字符中的浮点数
+							alert(parseFloat("12.34a34a"));
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

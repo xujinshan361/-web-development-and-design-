@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JS操作元素内容</title>
+		<!--声明JS代码域-->
+		<script type="text/javascript">
+			//获取元素内容
+			function getContext(){
+				//获取元素对象
+				var div =document.getElementById("div01");
+				//获取元素内容
+				alert(div.innerHTML);
+				alert(div.innerText);
+			}
+			//修改元素类容
+			function updateContext(){
+				//获取元素对象
+				var div =document.getElementById("div01");
+				//修改元素对象内容
+				div.innerHTML="<b>你先上，皇军给你殿后</b>";
+			}
+			function updateContext2(){
+				//获取元素对象
+				var div=document.getElementById("div01");
+				div.innerText="<b>八嘎</b>";
+			}
+		</script>
+		<!--声明CSS代码域-->
+		<style type="text/css">
+			#div01{
+				width: 200px;
+				height: 200px;
+				border: solid 1px orange;
+			}
+		</style>
+		<!--
+			操作元素内容学习：
+				获取元素对象
+					获取：
+						元素对象名.innerHTML  //返回当前元素对象的所有内容，包括HTML标签
+						元素对象名.innerText  //返回当前元素对象的文本内容，不包括HTML标签
+					修改
+						元素对象名.innerHTML="新的值"//会将原有内容覆盖，并HTML标签会被解析
+							元素对象名.innerHTML=元素对象名.innerHTML+"新的值"//追加效果
+						元素对象名.innerText="新的值"//会将原有内容覆盖，但HTML标签不会被解析，会作为普通文本显示。
+		-->
+	</head>
+	<body>
+		<h3>JS操作元素内容学习</h3>
+		<input type="button" name="" id="" value="测试获取元素内容----innerHTML&innerText" onclick="getContext()"/>
+		<input type="button" name="" id="" value="测试修改元素内容----innerHTML" onclick="updateContext()"/>
+		<input type="button" name="" id="" value="测试修改元素类容----innerText" onclick="updateContext2()" />
+		<br />
+		<div id="div01">
+			<b>皇军，前面有八路军的干活。</b>
+		</div>
+	</body>
+</html>

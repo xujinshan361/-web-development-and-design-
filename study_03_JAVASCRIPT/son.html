@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>son页面</title>
+		<!--声明JS代码域-->
+		<script type="text/javascript">
+			//倒计时功能
+			function testTime(){
+				window.setInterval(function(){
+					var span=document.getElementById("timespan");
+					span.innerHTML=span.innerHTML-1;
+					//关闭子页面
+					if(span.innerHTML==0){
+						window.close();
+					}
+				},1000);
+			}
+			//调用父页面函数
+			function testFa(){
+				window.opener.testFather();
+			}
+		</script>
+	</head>
+	<body onload="testTime()">
+		<h3>son页面</h3>
+		<hr />
+		<b>欢迎访问son页面，<span id="timespan" style="color: red;font-size: 40px;">5</span>秒后页面关闭</b>
+		<input type="button" name="" id="" value="调用父页面函数" onclick="testFa()" />
+	</body>
+</html>

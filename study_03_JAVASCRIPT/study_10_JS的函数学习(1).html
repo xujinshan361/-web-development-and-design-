@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<title>js的函数学习</title>
+		<meta charset="UTF-8"/>
+		<!--
+			test,1-2,
+			test(1,2)
+			js的函数学习一：
+				作用:功能代码块的封装。减少代码的冗余。
+				1、函数的声明：
+					方式一:function 函数名(形参名1,形参名2……){执行体}
+					方式二:var 函数名=new Function("形参1","形参2"……,"函数执行体");
+						注意：此声明表明在js中函数是作为对象存在的。
+					方式三:var 变量名=function(形参名1,形参名2……){函数执行体}	
+				2、函数的参数
+					js中的函数在调用时，形参可以不赋值，不会报错
+					js中的函数在调用时，形参赋值可以不全部赋值，不会报错，但是实参会依次进行赋值。
+				3、函数的返回值
+					在js中如果函数有返回值则直接返回，没有返回值默认返回undefined
+			注意：
+				js的代码声明区域和执行区域是一起的，都是在js代码的代码域中。
+			
+		-->
+		<!--声明js代码域-->
+		<script type="text/javascript">
+			//1、声明函数
+				//方式一:
+					function test1(a1,a2)
+					{
+						alert("函数声明一");
+					}
+				//方式二:
+					var test2=new Function("a1","a2","alert('函数声明二'+a1)");
+				//方式三:
+					var test3=function(a1,a2){
+						alert("我是函数声明三");
+					}
+				//调用声明的函数
+					//test2(1,2);
+			//2、函数的参数
+				function testParam(a1,a2,a3){
+					alert(a1);
+					alert("函数的形参学习");
+				}
+				//testParam(1,2);
+			//3、函数的返回值
+				var testReturn=function(){
+					alert("函数的返回值学习");
+					//return "js";
+				}
+				
+				alert(testReturn());	
+		</script>
+	</head>
+	<body>
+		<h3>js的函数学习</h3>
+	</body>
+</html>

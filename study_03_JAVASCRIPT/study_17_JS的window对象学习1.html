@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>window对象学习1</title>
+		<!--
+        	BOM浏览器对象学习：是规范浏览器对js语言的支持（JS调用浏览器本身的功能）
+        	BOM的具体实现是window对象
+        	window对象学习：
+        		1.window对象不用new，直接进行使用即可，类型Math的使用方法，window关键字可以省略不写
+        			
+        		2.框体方法:	
+        			alert:警告框                             	提示一个警告信息，没有返回值
+        			confirm:确认框                         	提示用户选择一项操作（确定/取消）
+        										点击确定  返回true
+        										点击取消  返回false
+        			prompt:提示框                           提示用某个信息的录入或者收集                         
+												点击确认，返回当前输入的数据，默认返回空字符串
+												点击取消，返回null;
+        		3.定时和间隔执行方法
+        			setTimeout:指定的时间后执行指定的函数
+								参数1：函数对象
+								参数2：时间，单位毫秒。
+								返回值：返回当前定时器的id
+					setInterval:每间隔指定的时间执行指定的函数
+								参数1：函数对象
+								参数2：时间，单位毫秒。
+								返回值：返回当前间隔器的id
+					clearTimeout:用来停止指定的定时器
+								参数：定时器的id								
+					clearInterval:用来停止指定的间隔器
+								参数：间隔器的id
+        -->
+        <!--什么js代码域-->
+        <script type="text/javascript">
+        	//窗体方法学习：
+        		//警告框
+        		function testAlert(){
+        			window.alert("我是警告框");
+        		}
+        		//确认框
+        		function testConfirm(){
+        			window.confirm("你确定要删除吗？");
+        		}
+        		//提示框
+        		function testPrompt(){
+        			window.prompt("请输入电脑名称：");
+        		}
+/**********************************************************************************/
+				var ids;
+				var idi;
+				//定时执行
+				function testSetTimeout(){
+					ids=window.setTimeout(function(){
+						alert("我是定时执行");
+					},3000);
+				}
+				//间隔执行
+				function testSetInterval(){
+					idi=window.setInterval(function(){
+						alert("我是间隔执行");
+					},200);
+				}
+				//停止当前的定时方法
+				//停止定时执行
+				function testClearTimeout(){
+					window.clearTimeout(ids);
+				}
+				//停止间隔执行
+				function testClearInterval(){
+					window.clearInterval(idi);
+				}
+        </script>
+	</head>
+	<body>
+		<h3>window对象学习</h3>
+		<hr />
+		<input type="button" name="" id="" value="测试警告框" onclick="testAlert()"/>
+		<input type="button" name="" id="" value="测试确认框" onclick="testConfirm()" />
+		<input type="button" name="" id="" value="测试提示框" onclick="testPrompt()" />
+		<hr />
+		<input type="button" name="" id="" value="测试setTimeout--定时执行" onclick="testSetTimeout()" />
+		<input type="button" name="" id="" value="测试setInterval--间隔执行" onclick="testSetInterval()" />
+		<input type="button" name="" id="" value="测试clearTimeout-- 停止指定的定时器" onclick="testClearTimeout()" />
+		<input type="button" name="" id="" value="测试clearInterval--停止指定的时间间隔执行" onclick="testClearInterval()" />
+	</body>
+</html>

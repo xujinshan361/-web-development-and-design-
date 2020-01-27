@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<title>js中的变量强转</title>
+		<meta charset="UTF-8"/>
+		<!--
+			js中的数据转换：
+				其他类型转换为number 类型:将其他数据类型转换成数值类型，转换失败返回NaN(not a number)
+					使用Number(其他类型的数据);
+						string 类型的数字字符:	对应的number数字
+						string 非数字字符:		NaN(number类型)
+						boolean true:		1
+						boolean false:		0
+						object 有具体的值:		数字
+						object null:		0	
+					其他类型转换为boolean 类型:将其他数据类型转换成布尔类型
+						使用Boolean(其他类型的数据);
+						number 正数或者负数：		true
+						number 0		:		false
+						string  非空字符串 :		true
+						string  空字符串 "":		false
+						object  具体的对象  :   	true
+						object  null    :       false
+						声明不赋值的变量		:       false
+		-->
+		<!--声明js代码域-->
+		<script type="text/javascript">
+			/*声明变量*/
+				/*var a="a";
+				var b=1;
+				var c=true
+				var d=new Date();
+				var d2=new Date();
+				var d1=null;
+				alert(Number(a));
+				alert(typeof Number(a));	*/
+			/*声明变量*/
+				var a=123;
+				var a1=-123
+				var a2=0;
+				var b="abcdf";
+				var b1="";
+				var d=new Date();
+				var d1=null;
+				var c;
+				alert(Boolean(c));
+				if(a){
+					alert("哈哈");
+				}
+		</script>
+	</head>
+	<body>
+		<h3>js中的变量强转</h3>
+	</body>
+</html>

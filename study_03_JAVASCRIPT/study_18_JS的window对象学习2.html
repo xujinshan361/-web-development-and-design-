@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JS的widow对象学习2</title>
+		<!--
+        	JS的window对象学习：
+        		1.子窗口方法
+        			window.open('子页面的资源(相对路径)','打卡方式','配置');
+						示例：window.open('son.html','newwindow','height=400, width=600, top=100px,left=320px, toolbar=yes, menubar=yes, scrollbars=yes, resizable=yes,location=no, status=yes');
+					注意:
+						关闭子页面的方法window.close(),但是此方法只能关闭open方法打开的子页面。
+						
+        		2.子页面调用父页面的函数
+        			window.opener.父页面的函数
+        	JS的window对象的常用属性
+        		地址栏属性:location
+					window.location.href="新的资源路径（相对路径/URL）"
+					window.location.reload()重新加载页面资源
+				历史记录属性
+					window.history.forward() 页面资源前进，历史记录的前进。
+					window.history.back()    页面资源后退，历史记录后退
+					window.history.go(index) 跳转到指定的历史记录资源
+						注意window.history.go(0)相当于刷新。
+				屏幕属性
+					window.srceen.width;//获取屏幕的宽度分辨率
+					window.screen.height;//获取屏幕的高度分辨率
+					
+				浏览器配置属性
+					
+				主体面板属性(document)
+        -->
+        <!--声明JS代码域-->
+        <script type="text/javascript">
+        	//子页面方法
+        	function testOpen(){
+        		window.open("son.html",'newwindow','height=400, width=600, top=100px,left=320px, toolbar=yes, menubar=yes, scrollbars=yes, resizable=yes,location=no, status=yes');
+        	}
+        	//子页面调用父页面的函数
+        	function testFather(){
+        		alert("父页面");
+        	}
+/**********************************************************************************/
+        	//地址栏属性学习--location--跳转资源
+        	function testLocation1(){
+        		window.location.href="http://www.baidu.com";
+        	}
+        	//location--页面重新加载
+        	function testLocation2(){
+        		window.location.reload();
+        	}
+        	//历史记录属性
+        	//历史记录前进
+        	function testHistory(){
+        		window.history.forward();
+        	}
+        	//历史属性--go
+        	function testHistory1(){
+        		window.history.go(0);//相当于刷新
+        	}
+        	//屏幕属性学习
+        	function testScreen(){
+        		var x=window.screen.width;
+        		var y=window.screen.height;
+        		alert(x+":"+y);
+        	}
+        	//浏览器配置属性
+        	function testNa(){
+        		alert(window.navigator.userAgent);
+        	}
+        </script>
+	</head>
+	<body>
+	<h3>window对象学习</h3>
+	<hr />
+	<input type="button" name="" id="" value="测试open" onclick="testOpen()" />
+	<hr />
+	<input type="button" name="" id="" value="测试地址栏属性--location--跳转资源" onclick="testLocation1()" />
+	<input type="button" name="" id="" value="测试地址栏属性--location--重新加载资源" onclick="testLocation2()" />
+	<br /><br />
+	<input type="button" name="" id="" value="测试历史属性--history--前进" onclick="testHistory()" />
+	<input type="button" name="" id="" value="测试历史属性--history--go" onclick="testHistory1()" />
+	<br /><br />
+	<input type="button" name="" id="" value="测试屏幕属性" onclick="testScreen()"/>
+	<input type="button" name="" id="" value="测试浏览器配置属性" onclick="testNa()" />
+	</body>
+</html>

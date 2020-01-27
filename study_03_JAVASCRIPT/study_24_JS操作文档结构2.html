@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>js操作文档结构2</title>
+		<!--
+			js操作文档结构2：
+				获取元素对象
+					var obj=document.createElement("标签名");
+					元素对象名.appendChild(obj);
+		-->
+		<!--声明js代码域-->
+		<script type="text/javascript">
+			function testOper2(){
+				//获取元素对象
+				var  showdiv=document.getElementById("showdiv");
+				//创建input元素对象
+				var inp=document.createElement("input");
+				inp.type="file";
+				//创建按钮元素对象
+				var btn=document.createElement("input");
+				btn.type="button";
+				btn.value="删除";
+				btn.onclick=function(){
+					showdiv.removeChild(inp);
+					showdiv.removeChild(btn);
+					showdiv.removeChild(br);
+				}
+				//创建换行符
+				var br=document.createElement("br");
+				//将创建的元素对象存放到div中
+				showdiv.appendChild(inp);
+				showdiv.appendChild(btn);
+				showdiv.appendChild(br);	
+			}
+		</script>
+	</head>
+	<body>
+		<h3>js操作文档结构2</h3>
+		<input type="button" name="" id="" value="继续上传" onclick="testOper2()"/>
+		<hr />
+		<div id="showdiv">
+			
+		</div>
+	</body>
+</html>

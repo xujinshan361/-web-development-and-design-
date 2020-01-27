@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<title>双搜</title>
+		<meta charset="UTF-8"/>
+		<title>哈哈</title>
+		<style type="text/css">
+			
+			#showdiv{
+				margin: auto;
+				margin-top: 150px;
+				width: 400px;
+				margin-bottom: 20px;
+			}
+			
+			
+		</style>
+		<script type="text/javascript">
+			
+			function test(){
+				var search=document.getElementById("search").value;
+				document.getElementById("wd").value=search;
+				document.getElementById("q").value=search;
+				
+				document.getElementById("fmB").submit();
+				document.getElementById("fmS").submit();
+				
+				//将隐藏的div显示出来
+					document.getElementById("div01").style.display="";
+				
+			}
+			
+			alert(document.getElementsByTagName("title"));
+			
+		</script>
+	</head>
+	<body>
+		<div id="showdiv">
+			<input type="text" name="" id="search" value="" />
+			<input type="button" name="" id="" value="牛逼一下" onclick="test()"/>
+		</div>
+		<hr />
+		<form action="http://www.baidu.com/s" method="get" id="fmB" target="ifB">
+			<input type="hidden" name="wd" id="wd" value="" />
+		</form>
+		<form action="http://www.so.com/s" method="get" id="fmS" target="ifS">
+			<input type="hidden" name="q" id="q" value="" />
+		</form>
+		<!--声明iframe-->
+		<div id="div01" style="display: none;">
+			<iframe src="" width="49%" height="500px" name="ifB"></iframe>
+			<iframe src="" width="49%" height="500px" name="ifS"></iframe>
+		</div>
+			
+	</body>
+</html>

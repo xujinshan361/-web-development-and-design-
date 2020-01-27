@@ -1,0 +1,73 @@
+<html>
+	<head>
+		<title>js的逻辑结构和循环结构学习</title>
+		<meta charset="UTF-8"/>
+		<!--
+			js的逻辑结构：
+				if结构
+					单分支结构：
+						if(判断条件){执行体}
+					双分支：
+						if(判断条件){执行体}else{执行体}
+					多分支：
+						if(判断条件){执行体}else if(判断条件){执行体}……else{执行体}
+				swicth选择结构：
+					switch (a){
+						case "1":
+							alert("第一项选择");
+							break;
+						case "2":
+							alert("第二项选择");
+							break;
+						default:
+							alert("没有对应的选项");
+							break;
+						}
+					注意：
+						判断的变量可以是number类型也可以是string类型，但是不要混用。
+				循环结构：
+					for(变量;条件;迭代条件){循环体}循环
+					while(循环条件){循环体}
+					do{循环体}while(循环条件)
+			
+		-->
+		<!--声明js代码域-->
+		<script type="text/javascript">
+			/*声明变量：if判断*/
+			var a=123;
+			var b=45;
+			if(a>10){
+				alert(a+b);
+			}
+			
+			/*声明变量：选择结构*/
+			var a=1;
+			switch (a){
+				case "1":
+					alert("第一项选择");
+					break;
+				case "2":
+					alert("第二项选择");
+				break;
+				default:
+					alert("没有对应的选项");
+					break;
+			}
+/*-----------------------------------------------------------------------------------*/
+			/*循环结构学习*/
+			for(var i=0;i<3;i++){
+				alert("好热:"+i);
+			}	
+			/*演示九九乘法表*/
+			for(var i=1;i<=9;i++){
+				for(var j=1;j<=i;j++){
+					document.write(i+"*"+j+"="+i*j+"&nbsp;&nbsp;&nbsp;&nbsp;");
+				}
+				document.write("<br />");
+			}
+		</script>
+	</head>
+	<body>
+		<h3>js的逻辑结构和循环结构学习</h3>
+	</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JS操作元素样式</title>
+		<!--
+        	JS操作元素样式:
+        		通过style属性
+        			元素对象名.style.样式名="样式值"   //添加或者修改
+        			元素对象名.style.样式名=""    //删除样式
+        			注意：
+        				以上操作，操作的是HTML的style属性声明中的样式，而不是其他CSS代码域中的样式
+        		通过className
+        			元素对象名.className="新的值"  //添加类选择器样式或者修改类选择器样式
+        			元素对象名.className=""     // 删除类样式
+        -->
+		<!--声明CSS代码-->
+		<style type="text/css">
+			.common{
+				width: 200px;
+				height: 200px;
+				border: solid 1px;
+			}
+			.common2{
+				 width: 200px;
+				 height: 200px;
+				 border: solid 1px;
+				 background-color: forestgreen;
+			}
+			#showdiv{
+				width: 200px;
+				height: 200px;
+				border: solid 1px;
+			}
+		</style>
+		<!--声明JS代码域-->
+		<script type="text/javascript">
+			//JS操作元素样式
+			//JS元素添加样式---style
+			function testOperCss(){
+				//获取元素样式
+				var showdiv=document.getElementById("showdiv");
+				//添加元素样式
+				showdiv.style.backgroundColor="#FFA500";
+				//JS修改元素样式
+				showdiv.style.border="solid 2px red";
+				//JS删除元素样式
+				showdiv.style.border="";
+			}
+			//JS操作样式--className
+			function testOperCss2(){
+				//获取元素对象
+				var div01=document.getElementById("div01");
+				//获取				
+				alert(div01.className);
+				//添加或者修改
+				div01.className ="common2";
+				//删除
+				div01.className="";
+			}
+		</script>
+	</head>
+	<body>
+		<h3>JS操作元素样式</h3>
+		<input type="button" name="" id="" value="测试添加元素样式----style" onclick="testOperCss()" />
+		<input type="button" name="" id="" value="测试添加元素样式----className" onclick="testOperCss2()" />
+		<hr />
+		<div id="showdiv">
+			
+		</div>
+		<div id="div01" class="common">
+			
+		</div>
+	</body>
+</html>

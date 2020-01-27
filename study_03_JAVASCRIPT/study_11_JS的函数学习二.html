@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<title>js的函数学习二</title>
+		<meta charset="UTF-8"/>
+		<!--
+			js的函数学习二:
+				1、函数的执行符:
+					在js中函数的执行符值()
+						没有小括号则函数名其实就是一个变量
+						加上小括号则会函数会被执行。
+				2、函数作为实参传递
+					在js中函数是可以作为实参进行传递的。
+					function testobj(a){
+						alert(a());
+					}
+					var testParam=function(){
+						alert("我是函数参数");
+					}			
+					testobj(testParam());				
+		-->
+		<!--声明js代码域-->
+		<script type="text/javascript">
+			//1、函数的执行符
+				var test1=function(){
+					alert("函数的执行符学习");
+					return "js";		
+				}
+				//alert(test1());
+			//2、函数作为实参进行传递
+				function testobj(a){
+					alert(a());
+				}
+				var testParam=function(){
+					alert("我是函数参数");
+				}
+				testobj(testParam());
+			//3、开发中经常用的传递方式
+				function testObj2(fn){//testObj2函数在被调用的时候，实参必须是一个函数对象。
+					fn();
+				}
+				testObj2(function(){
+					alert("开发");
+				})
+		</script>
+	</head>
+	<body>
+		<h3>js的函数学习二</h3>
+	</body>
+</html>

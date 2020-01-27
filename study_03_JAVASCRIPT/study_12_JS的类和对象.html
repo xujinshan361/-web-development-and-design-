@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>js中的类和对象学习</title>
+		<meta charset="UTF-8"/>
+		<!--
+			js中的类学习：
+				1、类的声明:
+					function 类名(形参1，形参2……){
+						this.属性名1=形参1;
+						this.属性名2=形参2;
+						……
+						this.属性名=fn
+					}
+				2、类的使用:
+					var 对象名=new 类名(实参1，实参2……);
+					注意：
+						js中类的内容只是对象的公共部分，每个对象还可以自定义的进行扩充。
+				3、类的"继承"：prototype关键字
+				、	同过prototype关键字实现了不同对象之间的数据共享。
+					作用1:实现某个类的所有子对象的方法区对象的共享，节省内存		
+		-->
+		<!--声明js代码域-->
+		<script type="text/javascript">
+			//1、类的声明--person
+			function Person(name,age){
+				Person.prototype=new User();
+				this.name=name;
+				this.age=age;
+				this.fav="唱歌";	
+			}
+			function User(uname,pwd){
+				this.uname=uname;
+				this.pwd=pwd;
+			}
+			//使用prototype
+				//Person.prototype.test=function(){alert("嘿嘿")};
+				Person.prototype=new User();
+				User.prototype.testU=function(){alert("我是user")};
+				//User.prototype.student=new Student();
+			//2、使用类
+				var p1=new Person("张三",32);
+//					p1.address="北京市";
+//					alert(p1.address);
+//					alert(p1.name);
+				var p2=new Person("李四",23);
+//					alert(p2.name);
+			//alert(p1.test===p2.test);//false;
+					alert(p1.test===p2.test);
+					p1.testU();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

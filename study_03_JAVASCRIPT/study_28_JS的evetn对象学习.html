@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>event对象学习</title>
+		<meta charset="UTF-8"/>
+		<!--
+			event对象学习：
+				1、event对象获取鼠标坐标
+				2、event对象获取键盘值
+		-->
+		<style type="text/css">
+			#showdiv{
+				width: 300px;
+				height: 300px;
+				border: solid 1px;
+				
+			}			
+		</style>
+		<script type="text/javascript">
+			function getMouse(event){
+				//获取event对象
+				var eve=event || window.event;//因为浏览器差异问题，使用此种方式获取event对象
+				var x=eve.clientX;
+				var y=eve.clientY;
+				alert(x+":"+y);				
+			}
+			function getKey(event){
+				//获取event对象
+				var eve=event || window.event;//因为浏览器差异问题，使用此种方式获取event对象
+				var code=eve.keyCode;
+				alert(code);
+			}
+		</script>
+	</head>
+	<body>
+		<h3>event对象学习</h3>
+		<hr />
+		<div id="showdiv" onmousemove="getMouse(event)">
+			
+		</div>
+		<br /><br />
+		<input type="text" name="" id="" value="" onkeydown="getKey(event)"/>
+	</body>
+</html>

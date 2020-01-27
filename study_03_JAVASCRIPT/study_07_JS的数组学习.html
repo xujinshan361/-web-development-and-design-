@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>js的数组学习</title>
+		<!--
+			js的数组学习：
+				1、数组的声明
+					var arr=new Array();//声明一个空数组对象
+					var arr=new Array(length)//声明一个指定长度的数组
+					var arr=[元素]//声明数组(最常用);<br />
+					注意：js中的数组声明不用指定长度，js的数组长度是不固定的，会随着元素的数量改变而改变。
+				2、数组的赋值和取值
+					数组可以存储任意类型的数据
+						数组名[角标]=值;//角标可以是任意的正整数或者是0
+					数组的取出：
+						数组名[角标]//返回当前角标对应存储的值
+						如果角标不存在，返回undefined;
+				3、数组的length属性
+					作用1：数组名.length//返回当前数组的长度。
+					作用于2：数组名.length=新的值//动态的改变数组的长度
+						  注意：length>原有长度，则使用空进行填充。
+						    length<原有长度，则从后面进行截取，最后的数据会被删除。
+				4、数组的遍历
+					普通for循环：
+						for(var i=0;i<arr.length;i++){
+							alert(arr[i]);
+						}
+					for-in：
+						for(var i in arr){
+							alert(i);//获取的是角标
+						}
+		-->
+		<!--声明js代码域-->
+		<script type="text/javascript">
+			//1、js的数组声明
+				/*var arr1=new Array();//第一种声明方式
+				arr1[0]="abc";
+				alert(arr1);
+				var arr2=new Array(5);//第二种声明
+				alert(arr2.length);
+				var arr3=[1,2,3,4,5];
+				alert(arr3);*/
+			//2、数组的赋值和取值
+				//声明数组
+					/*var  arr=[];
+					arr[0]=2;
+					arr[1]="abc";
+					arr[2]=true;
+					arr[3]=new Date();
+					arr[10]="哈哈";
+					alert(arr);
+					alert(arr[14]);*/
+			//3、数组的length属性
+					/*var arr=[1,2,3,4,5,6];
+					alert(arr.length);
+					arr.length=8;
+					alert(arr.length);
+					arr[2]="abc";
+					alert(arr);
+					arr.length=3;
+					alert(arr);*/
+			//4、数组的遍历
+				var arr=[1,"bnj",3,"a",4];
+				alert(arr);
+				//遍历1
+				/*for(var i=0;i<arr.length;i++){
+					alert(arr[i]);
+				}*/
+				//遍历2：
+					for(var i in arr){
+						alert(i);//获取的是角标
+					}
+		</script>
+	</head>
+	<body>
+		<h3>js的数组学习</h3>
+	</body>
+</html>
